@@ -24,6 +24,7 @@ One earn→spend loop: $724.95 earned → $423.30 vendor cost tracked → $301.6
 
 Swap pricing rules. Seed products. Any service business goes live in 15 minutes.
 
+Code: https://github.com/arealicehole/hermes-quote-bot-framework
 Demo: [link to video on X]
 #HermesAgent #BuildAgents
 ```
