@@ -1,0 +1,32 @@
+# Database
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Environment / secrets
+.env
+*.env
+stripe_integration.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log

@@ -1,0 +1,70 @@
+{
+  "version": 5,
+  "currency": "usd",
+  "last_updated": "2026-04-28",
+  "notes": "Brochure pricing: 4Over R5 tri-fold 100lb text, sliding scale 2x→1.5x by qty. Banner tiers v3 (B2Sign $1.09/sqft). Use pricing_history tool for actual what-was-charged data.",
+  "rules": {
+    "apparel": {
+      "base_unit_price": 18.0,
+      "default_unit_cost": 8.0,
+      "print_side_price": 5.0,
+      "description": "DTF/HTV on blank garments. Base = single-side S-XL. Add print_side_price per extra side.",
+      "size_upcharges": {
+        "XL": 0.0,
+        "2XL": 2.0,
+        "3XL": 3.0,
+        "4XL": 4.0,
+        "5XL": 5.0
+      },
+      "premium_brands_upcharge": 5.0,
+      "premium_brands": ["Bella+Canvas", "Next Level", "AS Colour"],
+      "hoodie_base_price": 40.0,
+      "hoodie_default_cost": 18.0
+    },
+    "business_card": {
+      "base_quantity": 100,
+      "base_price": 80.0,
+      "base_cost": 39.0,
+      "description": "Square 2.5x2.5 standard. Historical avg: 100ct=$35-80, 500ct=$45-65, 1000ct=$75.",
+      "lamination_upcharge": 10.0,
+      "double_sided_upcharge": 10.0,
+      "round_corners_upcharge": 15.0
+    },
+    "banner": {
+      "base_sqft_price": 3.27,
+      "base_sqft_cost": 1.09,
+      "vendor_cost_per_sqft": 1.09,
+      "minimum_price": 45.0,
+      "minimum_cost": 16.50,
+      "description": "Vinyl banners, flat or scrim. Price varies by size. Minimum $45 for small banners. Actual B2Sign cost ~$1.09/sqft + shipping. Pricing formula: MAX(3× cost, $3.27/sqft, $45 min). Small banners (<20sqft) can go to 3× cost. Large banners (50+sqft) use 2× cost minimum.",
+      "grommet_upcharge": 5.0,
+      "hem_upcharge": 5.0,
+      "overnight_shipping_estimate": 25.0,
+      "install_only_rate": 250.0,
+      "pricing_tiers": {
+        "under_20sqft": {"multiplier": 3.0, "description": "Small banners — 3× cost"},
+        "20_to_50sqft": {"multiplier": 2.5, "description": "Mid-size banners — 2.5× cost"},
+        "over_50sqft": {"multiplier": 2.0, "description": "Large banners — 2× cost minimum"}
+      }
+    },
+    "generic": {
+      "base_unit_price": 25.0,
+      "default_unit_cost": 10.0,
+      "description": "Fallback for unclassified items. Always check pricing_history first."
+    },
+    "brochure": {
+      "vendor": "4Over",
+      "description": "R5 Tri-fold brochures, 100lb text weight. 3-day turnaround. Pricing: sliding scale 2x (500ct) → 1.5x (5000ct). Minimum 500ct.",
+      "minimum_quantity": 500,
+      "pricing_tiers": {
+        "500":  {"cost_per_unit": 1.0020, "total_cost": 501.00,  "multiplier": 2.00},
+        "1000": {"cost_per_unit": 0.5859, "total_cost": 585.90,  "multiplier": 1.92},
+        "2000": {"cost_per_unit": 0.3792, "total_cost": 758.40,  "multiplier": 1.79},
+        "2500": {"cost_per_unit": 0.3671, "total_cost": 917.75,  "multiplier": 1.73},
+        "3000": {"cost_per_unit": 0.3546, "total_cost": 1063.80, "multiplier": 1.67},
+        "4000": {"cost_per_unit": 0.3049, "total_cost": 1219.60, "multiplier": 1.58},
+        "5000": {"cost_per_unit": 0.2556, "total_cost": 1278.00, "multiplier": 1.50}
+      }
+    }
+  }
+}

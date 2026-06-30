@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "currency": "usd",
+  "last_updated": "2026-06-29",
+  "notes": "Example pricing rules for a landscaping business. Swap this in for pricing_rules.json to convert the framework from print shop to landscaping.",
+  "rules": {
+    "tree-planting": {
+      "base_unit_price": 120.0,
+      "default_unit_cost": 45.0,
+      "description": "15-gallon tree, planting labor included",
+      "pricing_tiers": {
+        "1-5":   {"multiplier": 1.0, "description": "Small job — standard pricing"},
+        "6-20":  {"multiplier": 0.9, "description": "Mid-volume — 10% discount"},
+        "21+":   {"multiplier": 0.8, "description": "Large job — 20% discount"}
+      }
+    },
+    "mulch-delivery": {
+      "base_cubic_yard_price": 65.0,
+      "default_unit_cost": 22.0,
+      "delivery_minimum": 2.0,
+      "mileage_rate": 2.5,
+      "description": "Premium mulch, delivered and spread"
+    },
+    "irrigation-repair": {
+      "base_unit_price": 85.0,
+      "default_unit_cost": 15.0,
+      "description": "Per-zone irrigation repair, parts + labor"
+    },
+    "generic": {
+      "base_unit_price": 50.0,
+      "default_unit_cost": 20.0,
+      "description": "Fallback for unclassified services"
+    }
+  }
+}
